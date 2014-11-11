@@ -1,0 +1,38 @@
+allprojects {
+	apply plugin: 'java'
+    apply plugin: 'eclipse'
+    
+    group = 'com.gibson.untappd'
+    version = '1.0'
+    sourceCompatibility = 1.8
+    
+    repositories {
+       mavenCentral()
+    }
+    
+    dependencies {
+    	compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+    }
+}
+
+subprojects {
+	project(':untappd-jaxrs-client-api') {}
+	
+	project(':untappd-jaxrs-client-resteasy-impl') {
+		dependencies {
+			compile project(':untappd-jaxrs-client-api')
+			compile 'org.jboss.resteasy:resteasy-client:3.0.10.Final'
+			compile 'com.google.guava:guava:18.0'
+		}
+	}
+	
+	project(':untappd-jaxrs-server-api') {}
+	
+	project(':untappd-jaxrs-server-resteasy-impl') {
+		dependencies {
+			compile project(':untappd-jaxrs-server-api')
+			compile project(':untappd-jaxrs-client-resteasy-impl')
+			compile 'javax.enterprise:cdi-api:1.2'
+		}
+	}
+}

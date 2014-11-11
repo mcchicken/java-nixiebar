@@ -1,0 +1,4 @@
+include "untappd-jaxrs-client-api"
+include "untappd-jaxrs-server-api"
+include "untappd-jaxrs-client-resteasy-impl"
+include "untappd-jaxrs-server-resteasy-impl"
