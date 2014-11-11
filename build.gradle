@@ -16,6 +16,8 @@ allprojects {
 }
 
 subprojects {
+	project(':untappd-angular-ui') {}
+	
 	project(':untappd-jaxrs-client-api') {}
 	
 	project(':untappd-jaxrs-client-resteasy-impl') {
