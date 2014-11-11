@@ -7,5 +7,5 @@ import javax.ws.rs.QueryParam;
 @Path("oauth")
 public interface UntappdAuthentication {
 	@GET
-	public String authorize(@QueryParam("code") String code);
+	public Token authorize(@QueryParam("code") String code);
 }

@@ -28,7 +28,11 @@ subprojects {
 		}
 	}
 	
-	project(':untappd-jaxrs-server-api') {}
+	project(':untappd-jaxrs-server-api') {
+		dependencies {
+			compile project(':untappd-jaxrs-client-api')
+		}
+	}
 	
 	project(':untappd-jaxrs-server-resteasy-impl') {
 		dependencies {
