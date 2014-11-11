@@ -4,9 +4,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
-@Path("rest")
+@Path("oauth")
 public interface UntappdAuthentication {
 	@GET
-	@Path("authorize")
 	public String authorize(@QueryParam("code") String code);
 }
