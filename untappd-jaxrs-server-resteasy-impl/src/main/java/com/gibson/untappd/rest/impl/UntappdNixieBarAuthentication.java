@@ -16,6 +16,8 @@ public class UntappdNixieBarAuthentication implements UntappdAuthentication {
 	
 	@Override
 	public Token authorize(String code) {
-		return client.getAccessToken(code);
+		Token token = client.getAccessToken(code);
+		System.out.println("ACCESS TOKEN: " + token.getResponse().getAccess_Token());
+		return token;
 	}
 }

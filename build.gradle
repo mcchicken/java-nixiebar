@@ -1,6 +1,7 @@
 allprojects {
 	apply plugin: 'java'
     apply plugin: 'eclipse'
+    apply plugin: 'war'
     
     group = 'com.gibson.untappd'
     version = '1.0'
