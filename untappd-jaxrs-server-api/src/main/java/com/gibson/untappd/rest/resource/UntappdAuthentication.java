@@ -9,8 +9,8 @@ import javax.ws.rs.core.MediaType;
 import com.gibson.untappd.rest.domain.Token;
 
 @Path("/oauth")
+@Produces(MediaType.APPLICATION_JSON)
 public interface UntappdAuthentication {
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
 	public Token authorize(@QueryParam("code") String code);
 }
