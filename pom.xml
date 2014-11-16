@@ -41,6 +41,7 @@
 		    	<groupId>org.jboss.resteasy</groupId>
 		    	<artifactId>resteasy-client</artifactId>
 		    	<version>3.0.10.Final</version>
+		    	<scope>provided</scope>
 		    </dependency>
 		    <dependency>
 		    	<groupId>com.google.guava</groupId>
