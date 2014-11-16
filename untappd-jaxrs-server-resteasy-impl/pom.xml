@@ -16,6 +16,10 @@
       		<groupId>com.gibson.untappd</groupId>
       		<artifactId>untappd-jaxrs-server-api</artifactId>
 	    </dependency>
+	    <dependency>
+      		<groupId>com.gibson.untappd</groupId>
+      		<artifactId>untappd-jaxrs-client-resteasy-impl</artifactId>
+	    </dependency>
     	<dependency>
       		<groupId>javax.ws.rs</groupId>
       		<artifactId>javax.ws.rs-api</artifactId>

@@ -27,6 +27,11 @@
 	      		<artifactId>untappd-jaxrs-server-api</artifactId>
 	      		<version>1.0.0-SNAPSHOT</version>
 		    </dependency>
+		    <dependency>
+	      		<groupId>com.gibson.untappd</groupId>
+	      		<artifactId>untappd-jaxrs-client-resteasy-impl</artifactId>
+	      		<version>1.0.0-SNAPSHOT</version>
+		    </dependency>
 	    	<dependency>
 	      		<groupId>javax.ws.rs</groupId>
 	      		<artifactId>javax.ws.rs-api</artifactId>

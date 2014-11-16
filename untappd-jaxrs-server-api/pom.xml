@@ -12,6 +12,10 @@
   	</parent>
   	
   	<dependencies>
+  		<dependency>
+      		<groupId>com.gibson.untappd</groupId>
+      		<artifactId>untappd-jaxrs-client-api</artifactId>
+	    </dependency>
     	<dependency>
       		<groupId>javax.ws.rs</groupId>
       		<artifactId>javax.ws.rs-api</artifactId>
