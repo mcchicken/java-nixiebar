@@ -5,4 +5,8 @@
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
+    <context-param>
+	    <param-name>resteasy.providers</param-name>
+	    <param-value>com.gibson.untappd.rest.provider.GsonProvider</param-value>
+	</context-param>
 </web-app>
