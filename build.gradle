@@ -40,6 +40,7 @@ subprojects {
 			compile project(':untappd-jaxrs-server-api')
 			compile project(':untappd-jaxrs-client-resteasy-impl')
 			compile 'javax.enterprise:cdi-api:1.2'
+			compile 'com.google.code.gson:gson:2.3'
 		}
 	}
 }

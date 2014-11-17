@@ -9,6 +9,8 @@ import com.gibson.untappd.rest.resource.UntappdAuthentication;
 public class UntappdNixieBarAuthentication implements UntappdAuthentication {
 	private UntappdNixieBarClientImpl client;
 	
+	public UntappdNixieBarAuthentication() {}
+	
 	@Inject
 	public UntappdNixieBarAuthentication(UntappdNixieBarClientImpl client) {
 		this.client = client;
