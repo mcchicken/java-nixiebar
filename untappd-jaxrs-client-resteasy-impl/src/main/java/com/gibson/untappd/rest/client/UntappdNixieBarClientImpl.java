@@ -7,6 +7,7 @@ import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
 import com.gibson.untappd.rest.domain.Token;
 import com.gibson.untappd.rest.domain.User;
+import com.gibson.untappd.rest.provider.GsonProvider;
 import com.gibson.untappd.rest.resource.UntappdAuthenticationHandler;
 import com.gibson.untappd.rest.resource.UntappdUserStats;
 import com.google.common.base.Preconditions;
@@ -41,6 +42,7 @@ public class UntappdNixieBarClientImpl {
 						.newClient()
 						.target(UntappdAuthenticationHandler.OAUTH_ACCESS_TOKEN_URL);
 		ResteasyWebTarget resteasyTarget = (ResteasyWebTarget)target;
+		resteasyTarget.register(GsonProvider.class);
 		return resteasyTarget.proxy(UntappdAuthenticationHandler.class);
 	}
 
@@ -49,6 +51,7 @@ public class UntappdNixieBarClientImpl {
 						.newClient()
 						.target(UntappdUserStats.USER_STATS_URL);
 		ResteasyWebTarget resteasyTarget = (ResteasyWebTarget)target;
+		resteasyTarget.register(GsonProvider.class);
 		return resteasyTarget.proxy(UntappdUserStats.class);
 	}
 }
