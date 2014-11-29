@@ -15,7 +15,7 @@ import com.google.common.base.Preconditions;
 public class UntappdNixieBarClientImpl {
 	private static final String CLIENT_ID = "D5F54706652DD942DCF1C6AC855B7C22CF810FAE";
 	private static final String CLIENT_SECRET = "D5F54706652DD942DCF1C6AC855B7C22CF810FAE";
-	private static final String REDIRECT_URL = "http://nixiebar.com:8080/nixiebar-1.0/oauth";
+	private static final String REDIRECT_URL = "http://nixiebar.com:8080/untappd-jaxrs-server-resteasy-impl/rest/oauth";
 	
 	private final UntappdAuthenticationHandler authenticationHandler;
 	private final UntappdUserStats userStatsRetriever;
