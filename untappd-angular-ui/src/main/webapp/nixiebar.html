@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html ng-app="nixieBar">
-<head>
-<meta charset="UTF-8">
-	<title>NixieBar - Untappd statistics displayed on nixie tubes</title>
-</head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
-<script src="./js/nixiebar.js"></script>
-<body ng-controller="NixieBarController">
-	<label for="untappdUserNameId">Enter your Untappd user name </label>
-	<input id="untappdUserNameId" name="untappdUserName" type="text" ng-model="untappdUser" min="1" max="50" />
-	<input id="submitUserNameBtn" type="button" value="Add my stats" ng-click="goToUntappd"/>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>NixieBar - Untappd statistics displayed on nixie tubes</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+		<script src="./js/nixiebar.js"></script>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+	</head>
+	<body ng-controller="NixieBarController">
+		<div class="panel panel-default col-lg-6">
+			<div class="panel-heading">{{appName}}</div>
+			<div class="panel-body">
+				<div class="col-lg-4">
+				    <input id="untappdUserNameId" 
+				    	   name="untappdUserName" 
+				    	   type="text" 
+				    	   class="form-control"
+				    	   placeholder="Untappd Username"
+				    	   ng-model="untappdUser" 
+				    	   min="1"
+				    	   max="20" />
+	    		</div>
+	    		<div class="col-lg-4">
+					<input id="submitUserNameBtn" 
+					   	   type="button" 
+					   	   class="btn btn-primary"
+					   	   value="Add my stats"
+					   	   ng-click="goToUntappd" />
+		   		</div>
+			</div>
+		</div>
+	</body>
 </html>
