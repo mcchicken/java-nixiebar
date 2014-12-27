@@ -6,6 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.gibson.untappd.rest.domain.Client;
 import com.gibson.untappd.rest.domain.Token;
 
 @Path("/oauth")
@@ -13,4 +14,8 @@ import com.gibson.untappd.rest.domain.Token;
 public interface UntappdAuthentication {
 	@GET
 	public Token authorize(@QueryParam("code") String code);
+	
+	@GET
+	@Path("/client")
+	public Client clientId();
 }

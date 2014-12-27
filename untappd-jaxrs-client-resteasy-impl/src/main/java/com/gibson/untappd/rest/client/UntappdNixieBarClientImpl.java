@@ -5,6 +5,7 @@ import javax.ws.rs.client.WebTarget;
 
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 
+import com.gibson.untappd.rest.domain.Client;
 import com.gibson.untappd.rest.domain.Token;
 import com.gibson.untappd.rest.domain.User;
 import com.gibson.untappd.rest.provider.GsonProvider;
@@ -25,6 +26,10 @@ public class UntappdNixieBarClientImpl {
 		this.userStatsRetriever = createUserStatsRetriever();
 	}
 
+	public Client getClientInfo() {
+		return new Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
+	}
+	
 	public Token getAccessToken(String code) {
 		Preconditions.checkNotNull(code, "Can't retrieve access token without code");
 		

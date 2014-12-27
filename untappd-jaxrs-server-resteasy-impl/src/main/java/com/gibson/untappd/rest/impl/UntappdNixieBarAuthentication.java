@@ -3,6 +3,7 @@ package com.gibson.untappd.rest.impl;
 import javax.inject.Inject;
 
 import com.gibson.untappd.rest.client.UntappdNixieBarClientImpl;
+import com.gibson.untappd.rest.domain.Client;
 import com.gibson.untappd.rest.domain.Token;
 import com.gibson.untappd.rest.resource.UntappdAuthentication;
 
@@ -21,5 +22,10 @@ public class UntappdNixieBarAuthentication implements UntappdAuthentication {
 		Token token = client.getAccessToken(code);
 		System.out.println("ACCESS TOKEN: " + token.getResponse().getAccess_Token());
 		return token;
+	}
+
+	@Override
+	public Client clientId() {
+		return client.getClientInfo();
 	}
 }
