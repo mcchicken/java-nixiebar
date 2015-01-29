@@ -20,8 +20,17 @@ public class UntappdNixieBarDisplay implements UntappdBarDisplayable {
 
 	@Override
 	public int totalCheckinsFor(String username) {
-		// TODO Auto-generated method stub
-		return 0;
+		throw new UnsupportedOperationException("totalCheckinsFor not yet supported.");
 	}
 
+	@Override
+	public void turnOnDisplayCycleFor(String username, int delay) {
+		throw new UnsupportedOperationException("turnOnDisplayCycleFor not yet supported.");
+		
+	}
+
+	@Override
+	public void turnOffDisplayCycleFor(String username) {
+		throw new UnsupportedOperationException("turnOffDisplayCycleFor not yet supported.");
+	}
 }
