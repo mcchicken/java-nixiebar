@@ -9,6 +9,7 @@
   	
   	<modules>
   		<module>untappd-angular-ui</module>
+  		<module>untappd-guava-service</module>
   		<module>untappd-jaxrs-client-api</module>
   		<module>untappd-jaxrs-client-resteasy-impl</module>
   		<module>untappd-jaxrs-server-api</module>
@@ -62,16 +63,18 @@
 	</dependencyManagement>	
 	
 	<build>
-		<plugins>
-			<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-compiler-plugin</artifactId>
-		        <version>3.2</version>
-		        <configuration>
-		        	<source>1.8</source>
-		          	<target>1.8</target>
-		        </configuration>
-		    </plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+			        <groupId>org.apache.maven.plugins</groupId>
+			        <artifactId>maven-compiler-plugin</artifactId>
+			        <version>3.2</version>
+			        <configuration>
+			        	<source>1.8</source>
+			          	<target>1.8</target>
+			        </configuration>
+			    </plugin>
+			</plugins>
+		</pluginManagement>
 	</build>  	
 </project>

@@ -26,7 +26,6 @@ public class UntappdNixieBarDisplay implements UntappdBarDisplayable {
 	@Override
 	public void turnOnDisplayCycleFor(String username, int delay) {
 		throw new UnsupportedOperationException("turnOnDisplayCycleFor not yet supported.");
-		
 	}
 
 	@Override

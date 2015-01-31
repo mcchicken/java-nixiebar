@@ -18,6 +18,12 @@ allprojects {
 subprojects {
 	project(':untappd-angular-ui') {}
 	
+	project(':untappd-guava-service') {
+		dependencies {
+			compile 'com.google.guava:18.0'
+		}
+	}
+	
 	project(':untappd-jaxrs-client-api') {}
 	
 	project(':untappd-jaxrs-client-resteasy-impl') {
