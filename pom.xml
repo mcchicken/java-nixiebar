@@ -9,7 +9,6 @@
   	
   	<modules>
   		<module>untappd-angular-ui</module>
-  		<module>untappd-guava-service</module>
   		<module>untappd-jaxrs-client-api</module>
   		<module>untappd-jaxrs-client-resteasy-impl</module>
   		<module>untappd-jaxrs-server-api</module>
