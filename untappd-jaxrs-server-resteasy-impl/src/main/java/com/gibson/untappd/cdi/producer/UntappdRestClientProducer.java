@@ -2,7 +2,7 @@ package com.gibson.untappd.cdi.producer;
 
 import javax.enterprise.inject.Produces;
 
-import com.gibson.untappd.rest.client.UntappdNixieBarClientImpl;
+import com.gibson.untappd.rest.impl.UntappdNixieBarClientImpl;
 
 public class UntappdRestClientProducer {
 	@Produces

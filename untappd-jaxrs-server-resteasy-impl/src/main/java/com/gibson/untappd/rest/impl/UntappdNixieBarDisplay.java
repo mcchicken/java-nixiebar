@@ -2,7 +2,7 @@ package com.gibson.untappd.rest.impl;
 
 import javax.inject.Inject;
 
-import com.gibson.untappd.rest.client.UntappdNixieBarClientImpl;
+import com.gibson.untappd.rest.impl.UntappdNixieBarClientImpl;
 import com.gibson.untappd.rest.resource.UntappdBarDisplayable;
 
 public class UntappdNixieBarDisplay implements UntappdBarDisplayable {

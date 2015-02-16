@@ -2,9 +2,9 @@ package com.gibson.untappd.rest.impl;
 
 import javax.inject.Inject;
 
-import com.gibson.untappd.rest.client.UntappdNixieBarClientImpl;
 import com.gibson.untappd.rest.domain.Client;
 import com.gibson.untappd.rest.domain.Token;
+import com.gibson.untappd.rest.impl.UntappdNixieBarClientImpl;
 import com.gibson.untappd.rest.resource.UntappdAuthentication;
 
 public class UntappdNixieBarAuthentication implements UntappdAuthentication {

@@ -1,4 +1,4 @@
-package com.gibson.untappd.rest.client;
+package com.gibson.untappd.rest.impl;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
