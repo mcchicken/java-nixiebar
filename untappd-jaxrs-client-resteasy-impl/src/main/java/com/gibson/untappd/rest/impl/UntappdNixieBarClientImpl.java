@@ -7,7 +7,6 @@ import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.gibson.untappd.rest.adapter.TokenGsonAdapter;
 import com.gibson.untappd.rest.domain.Client;
 import com.gibson.untappd.rest.domain.Token;
 import com.gibson.untappd.rest.domain.User;
@@ -19,8 +18,9 @@ import com.google.common.base.Preconditions;
 public class UntappdNixieBarClientImpl {
 	private static final Logger logger = LoggerFactory.getLogger(UntappdNixieBarClientImpl.class);
 	private static final String CLIENT_ID = "D5F54706652DD942DCF1C6AC855B7C22CF810FAE";
-	private static final String CLIENT_SECRET = "D5F54706652DD942DCF1C6AC855B7C22CF810FAE";
+	private static final String CLIENT_SECRET = "6052C04CB127292C60BF5EE38D91C59E888F9EBA";
 	private static final String REDIRECT_URL = "http://nixiebar.com:8080/untappd-jaxrs-server-resteasy-impl/rest/oauth";
+	private static final String CODE_TYPE = "code";
 	
 	private final UntappdAuthenticationHandler authenticationHandler;
 	private final UntappdUserStats userStatsRetriever;
@@ -39,7 +39,7 @@ public class UntappdNixieBarClientImpl {
 		Preconditions.checkNotNull(code, "Can't retrieve access token without code");
 		
 		return authenticationHandler.getAccessTokenFromRedirect(CLIENT_ID, CLIENT_SECRET
-				, REDIRECT_URL, code);
+				, CODE_TYPE, REDIRECT_URL, code);
 	}
 	
 	public int getTotalUniqueCheckinsFor(String username) {
@@ -53,7 +53,6 @@ public class UntappdNixieBarClientImpl {
 		WebTarget target = ClientBuilder
 						.newClient()
 						.register(GsonProvider.class)
-						.register(TokenGsonAdapter.class)
 						.target(UntappdAuthenticationHandler.OAUTH_ACCESS_TOKEN_URL);
 		ResteasyWebTarget resteasyTarget = (ResteasyWebTarget)target;
 		return resteasyTarget.proxy(UntappdAuthenticationHandler.class);

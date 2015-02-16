@@ -18,6 +18,8 @@ import javax.ws.rs.ext.MessageBodyReader;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
+import com.gibson.untappd.rest.adapter.TokenGsonAdapter;
+import com.gibson.untappd.rest.domain.Token;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -32,7 +34,9 @@ public class GsonProvider implements MessageBodyWriter<Object>, MessageBodyReade
 	private Gson getGson() {
 		if (gson == null) {
 			final GsonBuilder gsonBuilder = new GsonBuilder();
-			gson = gsonBuilder.create();
+			gson = gsonBuilder
+					.registerTypeAdapter(Token.class, new TokenGsonAdapter())
+					.create();
 		}
 		return gson;
 	}

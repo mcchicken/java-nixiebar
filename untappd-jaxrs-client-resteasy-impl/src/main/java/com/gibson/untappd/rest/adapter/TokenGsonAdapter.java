@@ -1,10 +1,6 @@
 package com.gibson.untappd.rest.adapter;
 
 import java.lang.reflect.Type;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
 
 import com.gibson.untappd.rest.domain.Token;
 import com.google.gson.Gson;
@@ -18,7 +14,8 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 
 public class TokenGsonAdapter implements JsonDeserializer<Token>, JsonSerializer<Token> {
-	Gson gson = new GsonBuilder().create();
+	private static final String RESPONSE_ELEMENT = "response";
+	private final Gson gson = new GsonBuilder().create();
 	
 	@Override
 	public JsonElement serialize(Token token, Type type, JsonSerializationContext context) {
@@ -27,10 +24,17 @@ public class TokenGsonAdapter implements JsonDeserializer<Token>, JsonSerializer
 
 	@Override
 	public Token deserialize(JsonElement element, Type type,JsonDeserializationContext context) throws JsonParseException {
-		JsonObject object = element.getAsJsonObject();
-		Set<Map.Entry<String, JsonElement>> entries = object.entrySet();
-		Iterator<Entry<String, JsonElement>> iterator = entries.iterator();
-		JsonElement tokenElement = iterator.next().getValue();
-		return gson.fromJson(tokenElement, type);
+		JsonObject jsonObject = element.getAsJsonObject();
+		jsonObject = replaceResponseArrayWithObject(jsonObject);
+		return gson.fromJson(jsonObject, type);
+	}
+
+	private JsonObject replaceResponseArrayWithObject(JsonObject jsonObject) {
+		JsonElement response = jsonObject.get(RESPONSE_ELEMENT);
+		if(response.isJsonArray()) {
+			jsonObject.remove(RESPONSE_ELEMENT);
+			jsonObject.add(RESPONSE_ELEMENT, new JsonObject());
+		}
+		return jsonObject;
 	}
 }
