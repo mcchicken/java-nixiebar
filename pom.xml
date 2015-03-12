@@ -2,17 +2,17 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   	<modelVersion>4.0.0</modelVersion>
-  	<groupId>com.gibson.untappd</groupId>
+  	<groupId>com.gibson.nixiebar</groupId>
   	<artifactId>nixiebar</artifactId>
   	<version>1.0.0-SNAPSHOT</version>
   	<packaging>pom</packaging>
   	
   	<modules>
-  		<module>untappd-angular-ui</module>
+  		<module>nixiebar-angular-ui</module>
   		<module>untappd-jaxrs-client-api</module>
   		<module>untappd-jaxrs-client-resteasy-impl</module>
-  		<module>untappd-jaxrs-server-api</module>
-  		<module>untappd-jaxrs-server-resteasy-impl</module>
+  		<module>nixiebar-jaxrs-api</module>
+  		<module>nixiebar-jaxrs-resteasy-impl</module>
   	</modules>
   
   	<dependencyManagement>
@@ -23,8 +23,8 @@
 		    	<version>1.0.0-SNAPSHOT</version>
 		    </dependency>
 		    <dependency>
-	      		<groupId>com.gibson.untappd</groupId>
-	      		<artifactId>untappd-jaxrs-server-api</artifactId>
+	      		<groupId>com.gibson.nixiebar</groupId>
+	      		<artifactId>nixiebar-jaxrs-api</artifactId>
 	      		<version>1.0.0-SNAPSHOT</version>
 		    </dependency>
 		    <dependency>

@@ -13,11 +13,12 @@ allprojects {
     dependencies {
     	compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
     	compile 'org.slf4j:slf4j-api:1.7.10'
+        testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     }
 }
 
 subprojects {
-	project(':untappd-angular-ui') {}
+	project(':nixiebar-angular-ui') {}
 		
 	project(':untappd-jaxrs-client-api') {}
 	
@@ -30,13 +31,13 @@ subprojects {
 		}
 	}
 	
-	project(':untappd-jaxrs-server-api') {
+	project(':nixiebar-jaxrs-api') {
 		dependencies {
 			compile project(':untappd-jaxrs-client-api')
 		}
 	}
 	
-	project(':untappd-jaxrs-server-resteasy-impl') {
+	project(':nixiebar-jaxrs-resteasy-impl') {
 		dependencies {
 			compile project(':untappd-jaxrs-server-api')
 			compile project(':untappd-jaxrs-client-resteasy-impl')

@@ -2,19 +2,19 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   	<modelVersion>4.0.0</modelVersion>
-  	<artifactId>untappd-jaxrs-server-resteasy-impl</artifactId>
+  	<artifactId>nixiebar-jaxrs-resteasy-impl</artifactId>
   	<packaging>war</packaging>
   	
   	<parent>
-	  	<groupId>com.gibson.untappd</groupId>
+	  	<groupId>com.gibson.nixiebar</groupId>
   		<artifactId>nixiebar</artifactId>
   		<version>1.0.0-SNAPSHOT</version>
   	</parent>
   	
   	<dependencies>
   		<dependency>
-      		<groupId>com.gibson.untappd</groupId>
-      		<artifactId>untappd-jaxrs-server-api</artifactId>
+      		<groupId>com.gibson.nixiebar</groupId>
+      		<artifactId>nixiebar-jaxrs-api</artifactId>
 	    </dependency>
 	    <dependency>
       		<groupId>com.gibson.untappd</groupId>

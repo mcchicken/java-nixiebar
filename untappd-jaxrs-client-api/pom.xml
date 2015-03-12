@@ -6,7 +6,7 @@
   	<packaging>jar</packaging>
   	
   	<parent>
-	  	<groupId>com.gibson.untappd</groupId>
+	  	<groupId>com.gibson.nixiebar</groupId>
   		<artifactId>nixiebar</artifactId>
   		<version>1.0.0-SNAPSHOT</version>
   	</parent>
