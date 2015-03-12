@@ -8,9 +8,9 @@ import javax.ws.rs.QueryParam;
 import com.gibson.untappd.rest.domain.Token;
 
 public interface UntappdAuthenticationHandler {
-	String OAUTH_ACCESS_TOKEN_URL = "https://untappd.com/oauth/authorize/";	
-	String INITIAL_OAUTH_URL = "https://untappd.com/oauth/authenticate/";
-	
+	final String OAUTH_ACCESS_TOKEN_URL = "https://untappd.com/oauth/authorize/";
+	final String INITIAL_OAUTH_URL = "https://untappd.com/oauth/authenticate/";
+
 	@GET
 	@Path(INITIAL_OAUTH_URL)
 	public String getRedirectCode(@QueryParam("client_id") String clientId
