@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<modelVersion>4.0.0</modelVersion>
+  	<artifactId>untappd-rest-client-jersey-impl</artifactId>
+  	<packaging>jar</packaging>
+  	
+  	<parent>
+	  	<groupId>com.nixiebar</groupId>
+  		<artifactId>nixiebar</artifactId>
+  		<version>1.0.0-SNAPSHOT</version>
+  	</parent>
+  	
+  	<dependencies>
+        <dependency>
+            <groupId>com.nixiebar</groupId>
+            <artifactId>untappd-rest-client-api</artifactId>
+        </dependency>
+    	<dependency>
+      		<groupId>javax.ws.rs</groupId>
+      		<artifactId>javax.ws.rs-api</artifactId>
+	    </dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-proxy-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+  	</dependencies>
+</project>

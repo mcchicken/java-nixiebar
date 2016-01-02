@@ -1,10 +1,18 @@
-/.idea
+# IDEA files
+.idea
 *.iml
-/build/
-/bin/
-/target/
-.classpath
-/.gradle
-/.settings/
-.project
+.tern-project
 .DS_Store
+
+# Eclipse files
+.project
+.classpath
+
+# Gradle files
+build
+.gradle
+.settings
+
+# Maven files
+bin
+target

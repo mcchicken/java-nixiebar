@@ -2,34 +2,34 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   	<modelVersion>4.0.0</modelVersion>
-  	<groupId>com.gibson.nixiebar</groupId>
+  	<groupId>com.nixiebar</groupId>
   	<artifactId>nixiebar</artifactId>
   	<version>1.0.0-SNAPSHOT</version>
   	<packaging>pom</packaging>
   	
   	<modules>
   		<module>nixiebar-angular-ui</module>
-  		<module>untappd-jaxrs-client-api</module>
-  		<module>untappd-jaxrs-client-resteasy-impl</module>
-  		<module>nixiebar-jaxrs-api</module>
-  		<module>nixiebar-jaxrs-resteasy-impl</module>
+        <module>nixiebar-api</module>
+        <module>nixiebar-jersey-impl</module>
+  		<module>untappd-rest-client-api</module>
+  		<module>untappd-rest-client-jersey-impl</module>
   	</modules>
   
   	<dependencyManagement>
 	  	<dependencies>
+            <dependency>
+                <groupId>com.nixiebar</groupId>
+                <artifactId>nixiebar-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
 	  		<dependency>
-		    	<groupId>com.gibson.untappd</groupId>
-		    	<artifactId>untappd-jaxrs-client-api</artifactId>
+		    	<groupId>com.nixiebar</groupId>
+		    	<artifactId>untappd-rest-client-api</artifactId>
 		    	<version>1.0.0-SNAPSHOT</version>
 		    </dependency>
 		    <dependency>
-	      		<groupId>com.gibson.nixiebar</groupId>
-	      		<artifactId>nixiebar-jaxrs-api</artifactId>
-	      		<version>1.0.0-SNAPSHOT</version>
-		    </dependency>
-		    <dependency>
-	      		<groupId>com.gibson.untappd</groupId>
-	      		<artifactId>untappd-jaxrs-client-resteasy-impl</artifactId>
+	      		<groupId>com.nixiebar</groupId>
+	      		<artifactId>untappd-rest-client-jersey-impl</artifactId>
 	      		<version>1.0.0-SNAPSHOT</version>
 		    </dependency>
 	    	<dependency>
@@ -37,27 +37,21 @@
 	      		<artifactId>javax.ws.rs-api</artifactId>
 	      		<version>2.0.1</version>
 	    	</dependency>
-	    	<dependency>
-		    	<groupId>org.jboss.resteasy</groupId>
-		    	<artifactId>resteasy-client</artifactId>
-		    	<version>3.0.10.Final</version>
-		    	<scope>provided</scope>
-		    </dependency>
-		    <dependency>
-		    	<groupId>com.google.guava</groupId>
-		    	<artifactId>guava</artifactId>
-		    	<version>18.0</version>
-		    </dependency>
-		    <dependency>
-	      		<groupId>javax.enterprise</groupId>
-	      		<artifactId>cdi-api</artifactId>
-	      		<version>1.2</version>
-		    </dependency>
-		    <dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.3</version>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>2.22.1</version>
 			</dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.ext</groupId>
+                <artifactId>jersey-proxy-client</artifactId>
+                <version>2.22.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wordnik</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>1.5.3-M1</version>
+            </dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
