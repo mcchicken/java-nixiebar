@@ -1,7 +1,6 @@
 allprojects {
 	apply plugin: 'java'
-    apply plugin: 'war'
-    
+
     group = 'com.nixiebar'
     version = '1.0'
     sourceCompatibility = 1.8
@@ -17,7 +16,9 @@ allprojects {
 }
 
 subprojects {
-	project(':nixiebar-angular-ui') {}
+	project(':nixiebar-angular-ui') {
+        apply plugin: 'war'
+    }
 		
 	project(':untappd-rest-client-api') {}
 	
@@ -36,6 +37,7 @@ subprojects {
 	}
 	
 	project(':nixiebar-jersey-impl') {
+        apply plugin: 'war'
 		dependencies {
 			compile project(':nixiebar-api')
 			compile project(':untappd-rest-client-jersey-impl')
