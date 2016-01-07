@@ -1,7 +1,6 @@
 package com.nixiebar.rest.impl;
 
 import com.nixiebar.AuthenticationHandler;
-import com.nixiebar.domain.NixieUser;
 import com.wordnik.swagger.annotations.Api;
 
 import javax.ws.rs.PUT;

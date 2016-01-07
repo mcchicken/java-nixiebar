@@ -3,7 +3,6 @@ package com.nixiebar.rest.impl;
 import com.untappd.rest.domain.UntappdUser;
 import com.nixiebar.AuthenticationHandler;
 import com.nixiebar.CheckinStats;
-import com.nixiebar.domain.NixieUser;
 import com.untappd.rest.client.impl.UntappdRestClient;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
@@ -20,8 +19,8 @@ public class CheckinStatsImpl implements CheckinStats {
     private final AuthenticationHandler authenticationHandler;
 
     @Inject
-    public CheckinStatsImpl(UntappdRestClient client, AuthenticationHandler authenticationHandler) {
-        this.client = client;
+    public CheckinStatsImpl(AuthenticationHandler authenticationHandler) {
+        this.client = new UntappdRestClient();
         this.authenticationHandler = authenticationHandler;
     }
 
