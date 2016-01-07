@@ -30,9 +30,8 @@ public class CheckinStatsImpl implements CheckinStats {
     @ApiOperation(value = "Fetch total number of checkins for a user", response = Integer.class)
     @Override
     public Integer totalCheckinsFor(@QueryParam("username") String username) {
-        NixieUser authenticatedUser = authenticationHandler.fetchUser(username);
-        UntappdUser untappdUser = client.getUserStatsService().getUserStats(username,
-                authenticatedUser.getAccessToken());
+        String token = authenticationHandler.fetchUser(username);
+        UntappdUser untappdUser = client.getUserStatsService().getUserStats(token, username);
         return untappdUser.getStats().getTotal_checkins();
     }
 
@@ -41,9 +40,8 @@ public class CheckinStatsImpl implements CheckinStats {
     @ApiOperation(value = "Fetch total number of unique checkins for a user", response = Integer.class)
     @Override
     public Integer totalUniqueCheckinsFor(@QueryParam("username") String username) {
-        NixieUser authenticatedUser = authenticationHandler.fetchUser(username);
-        UntappdUser untappdUser = client.getUserStatsService().getUserStats(username,
-                authenticatedUser.getAccessToken());
+        String token = authenticationHandler.fetchUser(username);
+        UntappdUser untappdUser = client.getUserStatsService().getUserStats(token, username);
         return untappdUser.getStats().getTotal_beers();
     }
 }
