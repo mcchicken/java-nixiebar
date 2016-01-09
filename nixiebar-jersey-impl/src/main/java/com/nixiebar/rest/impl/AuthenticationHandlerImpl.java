@@ -1,7 +1,7 @@
 package com.nixiebar.rest.impl;
 
 import com.nixiebar.AuthenticationHandler;
-import com.wordnik.swagger.annotations.Api;
+import io.swagger.annotations.Api;
 
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;

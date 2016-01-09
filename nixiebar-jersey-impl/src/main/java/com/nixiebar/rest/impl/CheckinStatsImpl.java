@@ -4,8 +4,8 @@ import com.untappd.rest.domain.UntappdUser;
 import com.nixiebar.AuthenticationHandler;
 import com.nixiebar.CheckinStats;
 import com.untappd.rest.client.impl.UntappdRestClient;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
