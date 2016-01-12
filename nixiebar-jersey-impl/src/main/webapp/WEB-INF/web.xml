@@ -1,0 +1,11 @@
+<web-app>
+    <servlet>
+        <servlet-name>Nixiebar</servlet-name>
+        <servlet-class>NixieBarRestImpl</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Nixiebar</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+</web-app>

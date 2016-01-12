@@ -3,6 +3,7 @@ package com.nixiebar.rest.impl;
 import com.nixiebar.AuthenticationHandler;
 import io.swagger.annotations.Api;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -23,8 +24,10 @@ public class AuthenticationHandlerImpl implements AuthenticationHandler {
         return true;
     }
 
+    @GET
+    @Path("/{username}")
     @Override
-    public String fetchUser(String username) {
+    public String fetchUser(@PathParam("username") String username) {
         //TODO: fetch oauth access token for username
         return usernameTokens.get(username);
     }
