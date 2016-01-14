@@ -41,8 +41,6 @@ subprojects {
 		dependencies {
 			compile project(':nixiebar-api')
 			compile project(':untappd-rest-client-jersey-impl')
-			compile 'io.swagger:swagger-annotations:1.5.5'
-            compile 'io.swagger:swagger-core:1.5.5'
             compile 'io.swagger:swagger-jersey2-jaxrs:1.5.5'
         }
 	}
